@@ -389,6 +389,9 @@ background-color: #404bbf;
     display: flex;
     align-items: baseline;
 }
+
+/* div 1 */
+
 .footer-container {
     margin-right: 120px;
 }
@@ -423,9 +426,9 @@ background-color: #404bbf;
     letter-spacing: 0.02em;
     max-width: 264px;
 }
-.footer-container-two {
-    margin-right: 80px;
-}
+
+/* div 2 */
+
 .footer-icon-list {
     display: flex;
     gap: 16px;
@@ -453,9 +456,13 @@ background-color: #404bbf;
 .footer-icon-social {
     fill: #F4F4FD;
 }
+
+/* div 3 */
+
 .container-button {
     display: flex;
     flex-direction: column;
+    margin-left: auto;
 }
 .footer-text-icon {
     color: WHITE;
@@ -469,23 +476,24 @@ background-color: #404bbf;
 .form-footer {
     display: flex;
     gap: 24px;
+    align-items: center;
 }
-.input-footer {
+.label-footer-input {
     max-width: 264px;
     max-height: 40px;
     border: 1px solid #FFFFFF;
     border-radius: 4px;
-    background-color: #2E2F42;
+    background-color: transparent;
     padding: 8px 212px 8px 16px;
     box-shadow: 0px 4px 4px 0px #00000026;
-    font-family: Roboto;
     font-size: 12px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.04em;
     text-align: left;
+    outline: transparent;
 }
-input::placeholder {
+.label-footer-input::placeholder {
     color: #FFFFFF;
 }
 .button-footer {
@@ -509,4 +517,171 @@ input::placeholder {
 }
 .icon-footer {
     fill: #FFFFFF;
+}
+
+/* Modal window */
+
+.backdrop {
+background-color: rgba(46, 47, 66, 0.4);
+width: 100vw;
+height: 100vh;
+position: fixed;
+top: 0;
+left: 0;
+visibility: hidden;
+pointer-events: none;
+opacity: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.backdrop.is-open {  
+visibility: visible;
+    pointer-events: initial;
+    opacity: 1;
+}
+.modal {
+    background-color: #FCFCFC;
+    border-radius: 4px;
+width: 408px;
+min-height: 584px;
+padding: 24px;
+}
+
+.modal-btn {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-bottom: 24px;
+    border: 1px solid #0000001A;
+    border-radius: 50%;
+    color: #E7E9FC;
+}
+.modal-btn:focus {
+    background-color :#404BBF;
+}
+
+.modal-btn-icon {
+    fill: #2E2F42;
+}
+.modal-btn:hover,
+.modal-btn:focus + .modal-btn-icon {
+    fill: #FFFFFF;
+}
+.modal-text {
+    color: #2E2F42;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        margin-bottom: 16px;
+}
+.modal-form {
+display: flex;
+flex-direction: column;
+
+
+}
+.form-label {
+    display: block;
+color: #8E8F99;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    text-align: left;
+margin-bottom: 4px;
+}
+.field {
+margin-bottom: 8px;
+position: relative;
+}
+.form-input {
+border: 1px solid #2E2F4266;
+border-radius: 4px;
+background-color: inherit;
+width: 100%;
+height: 40px;
+padding-left: 38px;
+
+}
+.form-input:focus {
+border: 1px solid #4D5AE5;
+border-radius: 4px;
+outline: transparent;
+}
+.form-input:focus + .modal-icon {
+   fill: #4D5AE5;
+}
+.form-button {
+background-color: #4D5AE5;
+border-radius: 4px;
+box-shadow: 0px 4px 4px 0px #00000026;
+padding: 16px 32px;
+color: #FFFFFF;
+width: 169px;
+ height: 56px;
+ margin-top: 24px;
+ margin-right: auto;
+ margin-bottom: 0;
+ margin-left: auto;
+border: none;
+}
+textarea {
+    resize: none;
+}
+.field-feedback {
+    margin-bottom: 16px;
+}
+.user-comment::placeholder {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        color: #2E2F4266;
+        
+}
+.modal-icon {
+position: absolute;
+top: 50%;
+left: 16px;
+transform: translateY(-50%);
+fill: #2E2F42;
+}
+.user-comment {
+    width: 100%;
+    resize: vertical;
+    max-width: 360px;
+    max-height: 120px;
+    border: 1px solid #2E2F4266;
+        border-radius: 4px;
+        background-color: inherit;
+        padding-top: 8px;
+        padding-left: 16px;
+}
+.user-comment:focus {
+    border-color: #4D5AE5;
+    outline: transparent;
+}
+.checkbox-input {
+width: 16px;
+height: 16px;
+margin-right: 8px;
+border: 1px solid #2E2F4266;
+border-radius: 2px;
+outline: transparent;
+}
+.terms {
+    color: #4D5AE5;
+    text-decoration: underline;
+    line-height: 16px;
+}
+.text {
+    display: flex;
+    margin-bottom: 0;
+    align-items: center;
 }
