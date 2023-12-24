@@ -538,7 +538,7 @@ background-color: #404bbf;
     align-items: center;
     justify-content: center;
 }
-.backdrop.is-open {  
+/* .backdrop.is-open {   */
     visibility: visible;
     pointer-events: initial;
     opacity: 1;
